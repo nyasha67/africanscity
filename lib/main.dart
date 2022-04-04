@@ -1,7 +1,7 @@
+import 'package:africanscity/pages/custom_dropdown.dart';
+import 'package:africanscity/pages/login.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-import 'auth.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,8 +16,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       debugShowCheckedModeBanner: false,
-      home: Auth(),
+      home: Login(
+      ),
     );
   }
 }
+
 

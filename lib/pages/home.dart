@@ -3,42 +3,56 @@ import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key,}) : super(key: key);
-Widget customSearchBar=const Text('Africans city');
+
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+
 class _MyHomePageState extends State<MyHomePage> {
+
   Icon customIcon=const Icon(Icons.search);
+  Widget customSearchBar=const Text('Africans city');
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
 
-        title: Text('Africans City'),
+        title: customSearchBar,
+        //automaticallyImplyLeading: false,
         actions: <Widget>[
         IconButton(
           icon: Icon(Icons.search),
 
-            onPressed: (){
+            onPressed: () {
               setState(() {
-                if(customIcon.icon==Icons.search){
-                  customIcon=const Icon(Icons.cancel);
-                  customSearchBar=const ListTile(
-                    leading: Icon(Icons.search,color: Colors.white,size:28),
-                  );
+                if (customIcon.icon == Icons.search) {
+                  customIcon = const Icon(Icons.search);
 
-        TextField(
-    decoration:InputDecoration(
-    hintText:'type in....',
-    hintStyle:TextStyle(color:Colors.white,fontSize:18,fontStyle:FontStyle.normal)
-    ),
-        );
-    TextStyle(color:Colors.white);
+                } else {
+                  customSearchBar = const Text ('African city');
                 }
               });
-            },
 
-          ),
+
+              if (customIcon.icon == Icons.search) {
+                customIcon = const Icon(Icons.cancel);
+                customSearchBar = const ListTile(
+
+                  title: TextField(
+                    decoration: InputDecoration(
+                        hintText: 'search properties',
+                        hintStyle: TextStyle(color: Colors.white,
+                          fontSize: 18,
+                          fontStyle: FontStyle.normal,)
+                    ),
+
+                  ),
+                );
+              }
+            },
+            ),
 
 
 
@@ -66,7 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
            ListTile(
              title: Text('Featured Listing'),
 
+
              onTap: (){
+
 
              },
            ),
@@ -96,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
+
       ),
 
     );
