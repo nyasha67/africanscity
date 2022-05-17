@@ -1,4 +1,4 @@
-import 'package:africanscity/pages/home.dart';
+import 'package:africanscity/widget/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     )),
-                Text("sign in to continue",
+                Text("Sign in to continue",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w500,
@@ -52,7 +52,7 @@ class _LoginState extends State<Login> {
                           Icons.mail,
                           size: 30,
                         ),
-                        labelText: "EMAIL",
+                        labelText: "Email",
                         labelStyle: TextStyle(
                           fontSize: 20,
                           color: Colors.black,
@@ -88,7 +88,6 @@ class _LoginState extends State<Login> {
                   children: [
                     TextButton(
                       onPressed: () {},
-
                       child: Text(
                         "Forget password",
                         style: TextStyle(
@@ -118,7 +117,9 @@ class _LoginState extends State<Login> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Text("Login"),
+                    child: Text("Login"
+
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -128,9 +129,11 @@ class _LoginState extends State<Login> {
                     Text(
                       "Don't have an account",
                       style: TextStyle(
+                        fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
+                    SizedBox(width: 10),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -143,7 +146,7 @@ class _LoginState extends State<Login> {
                         style: TextStyle(
                           color: Colors.orange,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 18,
                         ),
                       ),
                     ),

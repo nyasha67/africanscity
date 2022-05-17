@@ -1,4 +1,4 @@
-import 'package:africanscity/pages/custom_dropdown.dart';
+
 import 'package:africanscity/pages/login.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NoteKeeper',
+      title: 'Africanscity',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.orange,
       ),
       debugShowCheckedModeBanner: false,
       home: Login(

@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
-
   @override
   _RegisterState createState() => _RegisterState();
 }
-
 class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
@@ -43,7 +41,9 @@ class _RegisterState extends State<Register> {
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
+
                     )),
+
                 Text("create new account",
                     style: TextStyle(
                       fontSize: 20,
@@ -75,7 +75,6 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 SizedBox(height: 10),
-
                 Container(
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
@@ -98,7 +97,6 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 SizedBox(height: 10),
-
                 Container(
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
@@ -121,10 +119,6 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 SizedBox(height: 10),
-
-
-
-
                 Container(
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
@@ -147,7 +141,6 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 SizedBox(height: 10),
-
                 Container(
                   child: TextFormField(
                     obscureText: true,
@@ -170,7 +163,6 @@ class _RegisterState extends State<Register> {
                         )),
                   ),
                 ),
-
                 SizedBox(
                   height: 10,
                 ),
@@ -198,12 +190,9 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context)=>const Register()),
-      );
-
+                      onTap: () {Navigator.push(context,
+               MaterialPageRoute(builder: (context)=>const Register()),
+              );
                       },
                       child: Text(
                         "Login",
