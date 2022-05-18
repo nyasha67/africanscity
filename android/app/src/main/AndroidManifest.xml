@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.notekeeper">
+    package="com.example.real_estate">
    <application
-        android:label="africanscity"
-        android:icon="@mipmap/launcher_icon">
+        android:label="real_estate"
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

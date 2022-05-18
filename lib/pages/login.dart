@@ -1,6 +1,6 @@
-import 'package:africanscity/widget/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:real_estate/widget/home.dart';
 
 import 'register.dart';
 

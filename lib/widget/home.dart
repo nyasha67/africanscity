@@ -1,12 +1,14 @@
-import 'package:africanscity/pages/apartment.dart';
-import 'package:africanscity/pages/house.dart';
-import 'package:africanscity/pages/pricing.dart';
-import 'package:africanscity/pages/plots.dart';
-import 'package:africanscity/pages/sale.dart';
-import 'package:africanscity/widget/welcome_text.dart';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:real_estate/model/house.dart';
+import 'package:real_estate/pages/apartment.dart';
+import 'package:real_estate/pages/house.dart';
+import 'package:real_estate/pages/plots.dart';
+import 'package:real_estate/pages/pricing.dart';
+import 'package:real_estate/pages/sale.dart';
+import 'package:real_estate/widget/welcome_text.dart';
 import '../pages/all.dart';
 import '../pages/rent.dart';
 import '../pages/stand.dart';
@@ -167,10 +169,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ListTile(
                     title: Text("House"),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => House()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => House()),
+                      // );
                     },
                   ),
                   ListTile(

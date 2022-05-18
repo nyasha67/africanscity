@@ -1,6 +1,7 @@
-import 'package:africanscity/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+import 'login.dart';
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
   @override

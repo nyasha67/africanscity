@@ -1,5 +1,6 @@
-import 'package:africanscity/widget/categories.dart';
 import 'package:flutter/material.dart';
+
+import 'categories.dart';
 class CustomAppBar extends StatefulWidget {
   const CustomAppBar({Key? key}) : super(key: key);
 

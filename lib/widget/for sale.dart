@@ -1,5 +1,5 @@
-import 'package:africanscity/model/house.dart';
 import 'package:flutter/material.dart';
+import 'package:real_estate/model/house.dart';
 
 class Forsale extends StatelessWidget {
   final forsaleList=House.generateForSale();
