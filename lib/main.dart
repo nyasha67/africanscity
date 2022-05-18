@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/pages/login.dart';
 import 'pages/root.dart';
 import 'theme/color.dart';
 void main() {
@@ -10,11 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Real Estate App',
+      title: 'Africnscity',
       theme: ThemeData(
         primaryColor: primary,
       ),
-      home: RootApp(),
+      home: Login(),
     );
   }
 

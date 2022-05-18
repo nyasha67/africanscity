@@ -160,6 +160,7 @@ class _HomePageState extends State<HomePage> {
   listPopulars(){
     return 
       CarouselSlider(
+
         options: CarouselOptions(
           height: 240,
           enlargeCenterPage: true,
