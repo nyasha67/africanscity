@@ -11,7 +11,8 @@ import 'package:real_estate/widgets/recent_item.dart';
 import 'package:real_estate/widgets/recommend_item.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({ Key? key }) : super(key: key);
+  const HomePage({ Key? key,  this.parentScaffoldKey }) : super(key: key);
+  final GlobalKey<ScaffoldState>? parentScaffoldKey;
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -82,7 +83,13 @@ class _HomePageState extends State<HomePage> {
                     child: CustomTextBox(hint: "Search", prefix: Icon(Icons.search, color: Colors.grey), )
                   ),
                   SizedBox(width: 10,),
-                  IconBox(child: Icon(Icons.filter_list_rounded, color: Colors.white), bgColor: secondary, radius: 10,)
+                  new IconButton(
+                    icon: new Icon(Icons.sort, color: Theme.of(context).hintColor,
+
+                    ),
+                    onPressed: () => widget.parentScaffoldKey!.currentState!.openDrawer(),
+                  ),
+                 // IconBox(child: Icon(Icons.filter_list_rounded, color: Colors.white), bgColor: secondary, radius: 10,)
                 ],
               ),
             ),
@@ -159,15 +166,20 @@ class _HomePageState extends State<HomePage> {
 
   listPopulars(){
     return 
-      CarouselSlider(
-
-        options: CarouselOptions(
-          height: 240,
-          enlargeCenterPage: true,
-          disableCenter: true,
-          viewportFraction: .8,
+      InkWell(
+        onTap:() {
+         // Navigator.push(context, MaterialPageRoute(builder: (context)=>PropertyItem))
+        },
+        child: CarouselSlider(
+          options: CarouselOptions(
+            autoPlay: true,
+            height: 240,
+            enlargeCenterPage: true,
+            disableCenter: true,
+            viewportFraction: .8,
+          ),
+          items: List.generate(populars.length, (index) => PropertyItem(data: populars[index]))
         ),
-        items: List.generate(populars.length, (index) => PropertyItem(data: populars[index]))
       );
   }
 

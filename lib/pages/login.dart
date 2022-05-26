@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:real_estate/widget/home.dart';
+import 'package:real_estate/pages/home.dart';
+import 'package:real_estate/pages/root.dart';
 
 import 'register.dart';
 
@@ -111,7 +112,7 @@ class _LoginState extends State<Login> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) =>  MyHomePage()),
+                        MaterialPageRoute(builder: (context) =>  RootApp()),
                       );
                     },
                     shape: RoundedRectangleBorder(
