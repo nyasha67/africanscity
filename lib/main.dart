@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
-import 'auth.dart';
-
+import 'pages/root.dart';
+import 'theme/color.dart';
 void main() {
   runApp(MyApp());
 }
@@ -11,13 +9,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NoteKeeper',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
       debugShowCheckedModeBanner: false,
-      home: Auth(),
+      title: 'Real Estate App',
+      theme: ThemeData(
+        primaryColor: primary,
+      ),
+      home: RootApp(),
     );
   }
-}
 
+}

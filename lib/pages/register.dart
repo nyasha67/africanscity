@@ -1,13 +1,12 @@
-import 'package:africanscity/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+import 'login.dart';
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
-
   @override
   _RegisterState createState() => _RegisterState();
 }
-
 class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class _RegisterState extends State<Register> {
                    IconButton(
                      icon:Icon(Icons.arrow_back,
                        size: 30,
-                       color:Theme.of(context).primaryColor,
+                       color:Colors.orange,
                    ),
                      onPressed: (){
                        Navigator.push(
@@ -37,18 +36,20 @@ class _RegisterState extends State<Register> {
                  ],
                ),
                 SizedBox(height: 10),
-                Icon(Icons.person_outlined, color: Colors.grey[300], size: 100),
+                Icon(Icons.person_outlined, color: Colors.orange, size: 100),
                 SizedBox(height: 13),
                 Text("Create Account",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
+
                     )),
+
                 Text("create new account",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey[400],
+                      color: Colors.orange,
                     )),
                 SizedBox(
                   height: 18,
@@ -59,7 +60,7 @@ class _RegisterState extends State<Register> {
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                      fontSize: 15,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -69,20 +70,19 @@ class _RegisterState extends State<Register> {
                         labelText: "Name",
                         labelStyle: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[400],
+                          color: Colors.black,
                           fontWeight: FontWeight.w800,
                         )),
                   ),
                 ),
                 SizedBox(height: 10),
-
                 Container(
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                      fontSize: 15,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -92,20 +92,19 @@ class _RegisterState extends State<Register> {
                         labelText: "Email",
                         labelStyle: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[400],
+                          color: Colors.black,
                           fontWeight: FontWeight.w800,
                         )),
                   ),
                 ),
                 SizedBox(height: 10),
-
                 Container(
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                      fontSize: 15,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -115,23 +114,19 @@ class _RegisterState extends State<Register> {
                         labelText: "Phone Number",
                         labelStyle: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[400],
+                          color: Colors.black,
                           fontWeight: FontWeight.w800,
                         )),
                   ),
                 ),
                 SizedBox(height: 10),
-
-
-
-
                 Container(
                   child: TextFormField(
                     keyboardType: TextInputType.emailAddress,
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                      fontSize: 15,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -141,20 +136,19 @@ class _RegisterState extends State<Register> {
                         labelText: "Password",
                         labelStyle: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[400],
+                          color: Colors.black,
                           fontWeight: FontWeight.w800,
                         )),
                   ),
                 ),
                 SizedBox(height: 10),
-
                 Container(
                   child: TextFormField(
                     obscureText: true,
                     style: TextStyle(
-                      color: Theme.of(context).primaryColor,
+                      color:Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 15,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -165,12 +159,11 @@ class _RegisterState extends State<Register> {
                         labelText: "Confirm Password",
                         labelStyle: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[400],
+                          color: Colors.black,
                           fontWeight: FontWeight.w800,
                         )),
                   ),
                 ),
-
                 SizedBox(
                   height: 10,
                 ),
@@ -178,8 +171,8 @@ class _RegisterState extends State<Register> {
                   height: 55,
                   width: double.infinity,
                   child: FlatButton(
-                    color: Theme.of(context).primaryColor,
-                    textColor: Colors.white,
+                    color:Colors.orange,
+                    textColor: Colors.black,
                     onPressed: () {},
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -198,11 +191,14 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {Navigator.push(context,
+               MaterialPageRoute(builder: (context)=>const Register()),
+              );
+                      },
                       child: Text(
                         "Login",
                         style: TextStyle(
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.orange,
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),

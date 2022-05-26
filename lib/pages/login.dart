@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:real_estate/widget/home.dart';
 
-import '../register.dart';
+import 'register.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  const Login({Key? key, }) : super(key: key);
 
   @override
   _LoginState createState() => _LoginState();
@@ -22,18 +22,18 @@ class _LoginState extends State<Login> {
             child: Column(
               children: [
                 SizedBox(height: 40),
-                Icon(Icons.person_outlined, color: Colors.grey[300], size: 140),
+                Icon(Icons.person_outlined, color: Colors.orange, size: 140),
                 SizedBox(height: 13),
                 Text("Welcome Back",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     )),
-                Text("sign in to continue",
+                Text("Sign in to continue",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey[400],
+                      color: Colors.orange,
                     )),
                 SizedBox(
                   height: 18,
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                      fontSize: 15,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -52,10 +52,10 @@ class _LoginState extends State<Login> {
                           Icons.mail,
                           size: 30,
                         ),
-                        labelText: "EMAIL",
+                        labelText: "Email",
                         labelStyle: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[400],
+                          color: Colors.black,
                           fontWeight: FontWeight.w800,
                         )),
                   ),
@@ -65,9 +65,9 @@ class _LoginState extends State<Login> {
                   child: TextFormField(
                     obscureText: true,
                     style: TextStyle(
-                      color: Theme.of(context).primaryColor,
+                      color:Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                      fontSize: 15,
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
@@ -78,13 +78,13 @@ class _LoginState extends State<Login> {
                         labelText: "Password",
                         labelStyle: TextStyle(
                           fontSize: 20,
-                          color: Colors.grey[400],
+                          color: Colors.black,
                           fontWeight: FontWeight.w800,
                         )),
                   ),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
                       onPressed: () {},
@@ -93,7 +93,7 @@ class _LoginState extends State<Login> {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.orange,
                         ),
                       ),
                     )
@@ -106,13 +106,20 @@ class _LoginState extends State<Login> {
                   height: 55,
                   width: double.infinity,
                   child: FlatButton(
-                    color: Theme.of(context).primaryColor,
-                    textColor: Colors.white,
-                    onPressed: () {},
+                    color: Colors.orange,
+                    textColor: Colors.black,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  MyHomePage()),
+                      );
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Text("Login"),
+                    child: Text("Login"
+
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -122,9 +129,11 @@ class _LoginState extends State<Login> {
                     Text(
                       "Don't have an account",
                       style: TextStyle(
+                        fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
+                    SizedBox(width: 10),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -135,9 +144,9 @@ class _LoginState extends State<Login> {
                       child: Text(
                         "Register",
                         style: TextStyle(
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.orange,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 18,
                         ),
                       ),
                     ),
