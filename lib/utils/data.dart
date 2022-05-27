@@ -11,6 +11,7 @@ List populars = [
     "price": "\$280k",
     "location": "Phnom Penh, Cambodia",
     "is_favorited": true,
+
   },
   {
     "image": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",

@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:real_estate/screen/details_screen.dart';
 import 'package:real_estate/theme/color.dart';
 import 'package:real_estate/utils/data.dart';
 import 'package:real_estate/widgets/category_item.dart';
 import 'package:real_estate/widgets/custom_image.dart';
 import 'package:real_estate/widgets/custom_textbox.dart';
-import 'package:real_estate/widgets/icon_box.dart';
 import 'package:real_estate/widgets/property_item.dart';
 import 'package:real_estate/widgets/recent_item.dart';
 import 'package:real_estate/widgets/recommend_item.dart';
@@ -122,6 +122,9 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+        GestureDetector(
+          onTap:(){Navigator.pushNamed(context,DetailsScreen.routeName);},
+        ),
             SizedBox(height: 20,),
             listRecommended(),
             SizedBox(height: 20,),
@@ -168,7 +171,8 @@ class _HomePageState extends State<HomePage> {
     return 
       InkWell(
         onTap:() {
-         // Navigator.push(context, MaterialPageRoute(builder: (context)=>PropertyItem))
+
+          // Navigator.push(context, MaterialPageRoute(builder: (context)=>PropertyItem));
         },
         child: CarouselSlider(
           options: CarouselOptions(

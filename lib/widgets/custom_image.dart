@@ -30,7 +30,7 @@ class CustomImage extends StatelessWidget {
             ),
           ],
           image: DecorationImage(image:NetworkImage(name),
-             fit: BoxFit.cover
+             fit: BoxFit.cover,
             ),
         ),
       )

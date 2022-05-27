@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/screen/details_screen.dart';
 import 'package:real_estate/theme/color.dart';
 import 'package:real_estate/utils/data.dart';
 import 'package:real_estate/widgets/broker_item.dart';
@@ -79,13 +80,16 @@ class _ExplorePageState extends State<ExplorePage> {
     List<Widget> lists = List.generate(recommended.length, 
       (index) => RecommendItem(data: recommended[index])
     );
-    
+    GestureDetector(
+      onTap:(){Navigator.pushNamed(context,DetailsScreen.routeName);},
+    );
     return
       SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.only(bottom: 5, left: 15),
         child: Row(
           children: lists
+
         ),
       );
   }
@@ -103,6 +107,9 @@ class _ExplorePageState extends State<ExplorePage> {
         },
       )
     );
+    GestureDetector(
+      onTap:(){Navigator.pushNamed(context,DetailsScreen.routeName);},
+    );
     
     return
       SingleChildScrollView(
@@ -117,6 +124,9 @@ class _ExplorePageState extends State<ExplorePage> {
   listBrokers(){
     List<Widget> lists = List.generate(brokers.length, 
       (index) => BrokerItem(data: brokers[index])
+    );
+    GestureDetector(
+      onTap:(){Navigator.pushNamed(context,DetailsScreen.routeName);},
     );
     
     return

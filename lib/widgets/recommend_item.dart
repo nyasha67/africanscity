@@ -26,6 +26,7 @@ class RecommendItem extends StatelessWidget {
         child: Stack(
           children: [
             CustomImage(data["image"], radius: 20, width: double.infinity, height: double.infinity,),
+
             Container(
               width: double.infinity, height: double.infinity,
               decoration: BoxDecoration(
@@ -52,6 +53,7 @@ class RecommendItem extends StatelessWidget {
                       Icon(Icons.place_outlined, color: Colors.white, size: 13,),
                       SizedBox(width: 3,),
                       Text(data["location"], style: TextStyle(fontSize: 13, color: Colors.white,),),
+
                     ],
                   ),
                 ],
